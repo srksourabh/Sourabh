@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "postbuild": "next-sitemap",
-    "preview": "npx @cloudflare/next-on-pages && npx wrangler pages dev .vercel/output/static",
-    "deploy": "npm run build && npx @cloudflare/next-on-pages && npx wrangler pages deploy .vercel/output/static --project-name=nordische-energy",
+    "preview": "npx wrangler pages dev out",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name=nordische-energy",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { CAPACITY_OPTIONS, INDUSTRIES_OPTIONS, SITE } from "@/lib/constants";
+import { submitLeadCapture } from "@/lib/api";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { toWhatsAppHref } from "@/lib/utils";
@@ -38,7 +39,8 @@ export function LeadCapture({
 }: LeadCaptureProps) {
   const [isPending, startTransition] = useTransition();
   const [submitted, setSubmitted] = useState(false);
-  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || "/api/contact";
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || "";
   const {
     register,
     handleSubmit,
@@ -55,18 +57,21 @@ export function LeadCapture({
 
   const onSubmit = (values: LeadFormValues) => {
     startTransition(async () => {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      setSubmitError(null);
+      if (!endpoint) {
+        setSubmitError("Contact endpoint is not configured yet. Please use WhatsApp or email us directly.");
+        return;
+      }
+
+      const response = await submitLeadCapture(endpoint, values);
 
       if (response.ok) {
         setSubmitted(true);
         reset();
+        return;
       }
+
+      setSubmitError("We could not submit your request right now. Please try WhatsApp or email.");
     });
   };
 
@@ -139,6 +144,9 @@ export function LeadCapture({
                 <Button aria-label="Submit your requirement" className="w-full" type="submit">
                   {isPending ? "Submitting..." : "Submit Requirement"} <ArrowRight className="h-4 w-4" />
                 </Button>
+                {submitError ? (
+                  <p className="mt-3 text-sm text-[var(--color-nord-red)]">{submitError}</p>
+                ) : null}
               </div>
             </form>
           )}
