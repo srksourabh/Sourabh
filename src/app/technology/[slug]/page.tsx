@@ -133,7 +133,7 @@ export default async function TechnologyDetailPage({
             <a
               aria-label="Download the Nordische Energy business brochure"
               className="inline-flex items-center gap-2 rounded-full border border-[var(--color-nord-slate)] px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-mist)] transition-colors hover:border-[var(--color-nord-teal)] hover:text-[var(--color-nord-teal)]"
-              href="/NES-Business-Brochure.docx"
+              href="/NES-Business-Brochure.pdf"
               download
             >
               Download Brochure

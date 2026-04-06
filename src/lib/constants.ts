@@ -15,7 +15,7 @@ export const SITE = {
   founded: "2022",
   linkedin: "https://linkedin.com/company/nordische-energy",
   xtwitter: "https://x.com/nordischeenergy",
-  brochure: "/NES-Business-Brochure.docx",
+  brochure: "/NES-Business-Brochure.pdf",
 };
 
 export const HEADQUARTERS = {

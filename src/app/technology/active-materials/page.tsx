@@ -324,7 +324,7 @@ export default function ActiveMaterialsPage() {
                 Download the NES Active Material Catalogue for complete data sheets, pricing tiers, and MOQ information.
               </p>
             </div>
-            <Button href="/NES-Business-Brochure.docx" variant="ghost" download>
+            <Button href="/NES-Business-Brochure.pdf" variant="ghost" download>
               <Download className="h-4 w-4" />
               Download Brochure
             </Button>
@@ -356,7 +356,7 @@ export default function ActiveMaterialsPage() {
               <Button href="/contact" variant="primary">
                 Contact Materials Team <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="/NES-Business-Brochure.docx" variant="outline" download>
+              <Button href="/NES-Business-Brochure.pdf" variant="outline" download>
                 <Download className="h-4 w-4" />
                 Download Brochure
               </Button>
