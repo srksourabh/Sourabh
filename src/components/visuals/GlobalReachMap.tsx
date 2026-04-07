@@ -55,6 +55,8 @@ export function GlobalReachMap() {
         <p className="text-sm text-[var(--color-nord-teal)]">Bangalore to the World</p>
       </div>
 
+      <div className="grid lg:grid-cols-[1fr_260px]">
+      {/* Map */}
       <svg viewBox="0 0 1000 500" className="w-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="map-glow">
@@ -381,6 +383,25 @@ export function GlobalReachMap() {
           transition={{ duration: 2.5, repeat: Infinity }}
         />
       </svg>
+
+      {/* Country legend panel */}
+      <div className="flex flex-col gap-2 border-t border-[var(--color-nord-slate)] p-4 lg:border-l lg:border-t-0">
+        {PARTNERS.map((partner) => (
+          <div
+            key={partner.label}
+            className="flex items-center gap-3 rounded-xl border border-[var(--color-nord-slate)] bg-[color:rgb(17_21_32_/_0.7)] px-4 py-3"
+          >
+            <span className="flex h-3 w-3 shrink-0 rounded-full bg-[var(--color-nord-teal)]" />
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--color-nord-white)]">
+                {partner.label}
+              </p>
+              <p className="text-xs text-[var(--color-nord-mist)]">{partner.sub}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      </div>
     </div>
   );
 }
