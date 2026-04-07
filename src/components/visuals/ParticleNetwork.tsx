@@ -12,29 +12,36 @@ const PILLAR_IMAGES = [
   { src: "/images/pillar-sustainability.png", alt: "Sustainability" },
 ];
 
+/* Nodes positioned as percentages so they span the full container */
+const NODES = [
+  { xPct: 5,  yPct: 25, label: "R&D", size: 8 },
+  { xPct: 18, yPct: 18, label: "Al-G", size: 10 },
+  { xPct: 35, yPct: 30, label: "BMS", size: 9 },
+  { xPct: 50, yPct: 15, label: "Grid", size: 9 },
+  { xPct: 65, yPct: 28, label: "H₂", size: 8 },
+  { xPct: 80, yPct: 20, label: "IoT", size: 8 },
+  { xPct: 95, yPct: 30, label: "AI", size: 7 },
+  { xPct: 10, yPct: 72, label: "EV", size: 9 },
+  { xPct: 28, yPct: 80, label: "LUC", size: 8 },
+  { xPct: 45, yPct: 70, label: "ESS", size: 9 },
+  { xPct: 60, yPct: 82, label: "LFP", size: 8 },
+  { xPct: 75, yPct: 68, label: "NMC", size: 8 },
+  { xPct: 92, yPct: 75, label: "SiC", size: 7 },
+];
+
+const EDGES: [number, number][] = [
+  [0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6],
+  [7, 8], [8, 9], [9, 10], [10, 11], [11, 12],
+  [0, 7], [1, 8], [2, 9], [3, 10], [4, 11], [5, 12],
+  [1, 3], [2, 4], [4, 6], [7, 9], [9, 11], [8, 10], [10, 12],
+];
+
 /**
  * Animated particle network with connecting lines overlaid on
  * a 3x2 collage of the six engineering pillar images.
+ * Uses percentage-based positioning so nodes span the full container.
  */
 export function ParticleNetwork({ className = "" }: { className?: string }) {
-  const nodes = [
-    { x: 30, y: 55, label: "R&D", size: 8 },
-    { x: 120, y: 35, label: "Al-G", size: 10 },
-    { x: 230, y: 25, label: "BMS", size: 9 },
-    { x: 350, y: 45, label: "Grid", size: 9 },
-    { x: 460, y: 30, label: "H₂", size: 8 },
-    { x: 70, y: 140, label: "EV", size: 9 },
-    { x: 180, y: 160, label: "LUC", size: 8 },
-    { x: 300, y: 150, label: "IoT", size: 8 },
-    { x: 420, y: 170, label: "ESS", size: 9 },
-    { x: 470, y: 110, label: "AI", size: 7 },
-  ];
-
-  const edges = [
-    [0, 1], [1, 2], [2, 3], [3, 4], [0, 5], [5, 6], [6, 7], [7, 8], [8, 9],
-    [1, 5], [1, 6], [2, 6], [2, 7], [3, 7], [3, 8], [4, 9], [5, 7], [6, 8],
-  ];
-
   return (
     <div className={`relative overflow-hidden rounded-[2rem] border border-[var(--color-nord-slate)] ${className}`}>
       {/* 3x2 image collage background */}
@@ -53,13 +60,18 @@ export function ParticleNetwork({ className = "" }: { className?: string }) {
       </div>
 
       {/* Dark overlay so the animation remains visible */}
-      <div className="absolute inset-0 bg-[color:rgb(10_12_16_/_0.72)]" />
+      <div className="absolute inset-0 bg-[color:rgb(10_12_16_/_0.65)]" />
 
-      {/* Animated SVG network on top */}
-      <svg viewBox="0 0 500 200" className="relative z-10 h-full w-full" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Full-coverage SVG network using percentage-based viewBox */}
+      <svg
+        className="relative z-10 h-full w-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
           <filter id="node-glow">
-            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feGaussianBlur stdDeviation="0.8" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -68,23 +80,25 @@ export function ParticleNetwork({ className = "" }: { className?: string }) {
         </defs>
 
         {/* Edges with flowing particles */}
-        {edges.map(([a, b], i) => (
+        {EDGES.map(([a, b], i) => (
           <g key={`edge-${i}`}>
             <line
-              x1={nodes[a].x} y1={nodes[a].y}
-              x2={nodes[b].x} y2={nodes[b].y}
-              stroke="rgb(0 212 170 / 0.18)" strokeWidth="1"
+              x1={NODES[a].xPct} y1={NODES[a].yPct}
+              x2={NODES[b].xPct} y2={NODES[b].yPct}
+              stroke="rgb(0 212 170 / 0.2)" strokeWidth="0.2"
+              vectorEffect="non-scaling-stroke"
             />
             <motion.circle
-              r="2.5"
-              fill="rgb(0 212 170)" filter="url(#node-glow)"
+              r="0.6"
+              fill="rgb(0 212 170)"
+              filter="url(#node-glow)"
               animate={{
-                cx: [nodes[a].x, nodes[b].x],
-                cy: [nodes[a].y, nodes[b].y],
+                cx: [NODES[a].xPct, NODES[b].xPct],
+                cy: [NODES[a].yPct, NODES[b].yPct],
               }}
               transition={{
-                duration: 2 + i * 0.3,
-                delay: i * 0.4,
+                duration: 2.5 + i * 0.2,
+                delay: i * 0.3,
                 repeat: Infinity,
                 ease: "linear",
               }}
@@ -93,31 +107,44 @@ export function ParticleNetwork({ className = "" }: { className?: string }) {
         ))}
 
         {/* Nodes */}
-        {nodes.map((node, i) => (
+        {NODES.map((node, i) => (
           <g key={`node-${i}`}>
+            {/* Pulsing outer ring */}
             <motion.circle
-              cx={node.x} cy={node.y} r={node.size + 6}
+              cx={node.xPct} cy={node.yPct}
               fill="none" stroke="rgb(0 212 170 / 0.25)"
+              strokeWidth="0.15"
+              vectorEffect="non-scaling-stroke"
               animate={{
-                r: [node.size + 4, node.size + 12, node.size + 4],
-                opacity: [0.3, 0.1, 0.3],
+                r: [2.5, 4, 2.5],
+                opacity: [0.3, 0.08, 0.3],
               }}
-              transition={{ duration: 3, delay: i * 0.5, repeat: Infinity }}
+              transition={{ duration: 3, delay: i * 0.4, repeat: Infinity }}
+            />
+            {/* Solid node */}
+            <circle
+              cx={node.xPct} cy={node.yPct} r="2"
+              fill="rgb(0 212 170 / 0.15)"
+              stroke="rgb(0 212 170 / 0.7)"
+              strokeWidth="0.15"
+              vectorEffect="non-scaling-stroke"
             />
             <motion.circle
-              cx={node.x} cy={node.y} r={node.size}
-              fill="rgb(0 212 170 / 0.2)"
-              stroke="rgb(0 212 170 / 0.7)"
-              strokeWidth="1.5"
-              filter="url(#node-glow)"
-              animate={{ opacity: [0.6, 1, 0.6] }}
-              transition={{ duration: 2, delay: i * 0.3, repeat: Infinity }}
+              cx={node.xPct} cy={node.yPct} r="2"
+              fill="rgb(0 212 170 / 0.08)"
+              stroke="rgb(0 212 170 / 0.9)"
+              strokeWidth="0.2"
+              vectorEffect="non-scaling-stroke"
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, delay: i * 0.25, repeat: Infinity }}
             />
+            {/* Label */}
             <text
-              x={node.x} y={node.y + 3.5}
+              x={node.xPct} y={node.yPct}
               textAnchor="middle"
+              dominantBaseline="central"
               fill="rgb(0 212 170)"
-              fontSize="7"
+              fontSize="1.6"
               fontFamily="monospace"
               fontWeight="600"
             >
