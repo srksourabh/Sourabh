@@ -11,7 +11,7 @@ export function BatteryChargingAnimation({ className = "" }: { className?: strin
     <div className={`relative overflow-hidden rounded-[2rem] border border-[var(--color-nord-slate)] bg-[var(--color-nord-black)] p-8 ${className}`}>
       <svg viewBox="0 0 400 200" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="charge-level" x1="0" y1="1" x2="0" y2="0">
+          <linearGradient id="charge-level" x1="0" y1="0" x2="1" y2="0">
             <motion.stop
               offset="0%"
               animate={{ stopColor: ["#e05252", "#f5a623", "#00d4aa"] }}
@@ -41,32 +41,31 @@ export function BatteryChargingAnimation({ className = "" }: { className?: strin
           <line key={x} x1={x} y1="40" x2={x} y2="160" stroke="rgb(42 53 73)" strokeWidth="1.5" />
         ))}
 
-        {/* Charging fill with color animation */}
+        {/* Charging fill — left to right */}
         <motion.rect
-          x="66" y="36" width="228" rx="8"
+          x="66" y="36" height="128" rx="8"
           fill="url(#charge-level)"
-          animate={{ height: [0, 128], y: [164, 36] }}
+          animate={{ width: [0, 228] }}
           transition={{ duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
         />
 
         {/* Electricity sparks during charging */}
-        {[90, 150, 210, 270].map((x, i) => (
-          <motion.g key={x}>
+        {[80, 120, 160, 200].map((y, i) => (
+          <motion.g key={y}>
             <motion.line
-              x1={x} y1={100} x2={x} y2={100}
+              x1={180} y1={y} x2={180} y2={y}
               stroke="rgb(255 255 255 / 0.8)" strokeWidth="2" strokeLinecap="round"
               animate={{
-                y1: [120, 60, 120],
-                y2: [115, 55, 115],
-                opacity: [0, 1, 0],
+                x1: [80, 280, 80],
+                x2: [85, 285, 85],
+                opacity: [0, 0.8, 0],
               }}
-              transition={{ duration: 1.5, delay: i * 0.3, repeat: Infinity }}
+              transition={{ duration: 2, delay: i * 0.4, repeat: Infinity }}
             />
-            {/* Spark dots */}
             <motion.circle
-              cx={x} r="2" fill="white"
-              animate={{ cy: [120, 55, 120], opacity: [0, 1, 0] }}
-              transition={{ duration: 1.5, delay: i * 0.3, repeat: Infinity }}
+              cy={y} r="2" fill="white"
+              animate={{ cx: [80, 285, 80], opacity: [0, 1, 0] }}
+              transition={{ duration: 2, delay: i * 0.4, repeat: Infinity }}
             />
           </motion.g>
         ))}
