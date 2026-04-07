@@ -151,40 +151,41 @@ export default function TechnologyPage() {
                 ))}
               </div>
             </Card>
-            <Card className="p-8">
-              <h2 className="text-4xl uppercase">Chemistry Comparison</h2>
-              <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
-                <table className="w-full text-left text-sm">
-                  <thead className="bg-[var(--color-nord-deep)]">
-                    <tr>
-                      <th className="px-4 py-4 text-[var(--color-nord-mist)]">Chemistry</th>
-                      <th className="px-4 py-4 text-[var(--color-nord-mist)]">Best For</th>
-                      <th className="px-4 py-4 text-[var(--color-nord-mist)]">Trade-off</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ["NMC", "High-energy EVs and mobile platforms", "Higher thermal control requirements"],
-                      ["LFP", "Stationary storage and telecom backup", "Lower energy density"],
-                      ["LTO", "Extreme fast charge and harsh climates", "Higher cost per kWh"],
-                    ].map(([chemistry, useCase, tradeoff]) => (
-                      <tr key={chemistry} className="border-t border-[var(--color-nord-slate)]">
-                        <td className="px-4 py-4 text-[var(--color-nord-white)]">{chemistry}</td>
-                        <td className="px-4 py-4 text-[var(--color-nord-light)]">{useCase}</td>
-                        <td className="px-4 py-4 text-[var(--color-nord-light)]">{tradeoff}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-5 text-sm text-[var(--color-nord-mist)]">
-                Decision guide: prioritize NMC for vehicle range, LFP for lifetime economics, and LTO where rapid
-                charge acceptance or extreme temperature resilience dominates the brief.
-              </p>
-            </Card>
-
             <div className="space-y-6">
+              <Card className="p-8">
+                <h2 className="text-4xl uppercase">Chemistry Comparison</h2>
+                <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-[var(--color-nord-deep)]">
+                      <tr>
+                        <th className="px-4 py-4 text-[var(--color-nord-mist)]">Chemistry</th>
+                        <th className="px-4 py-4 text-[var(--color-nord-mist)]">Best For</th>
+                        <th className="px-4 py-4 text-[var(--color-nord-mist)]">Trade-off</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        ["NMC", "High-energy EVs and mobile platforms", "Higher thermal control requirements"],
+                        ["LFP", "Stationary storage and telecom backup", "Lower energy density"],
+                        ["LTO", "Extreme fast charge and harsh climates", "Higher cost per kWh"],
+                      ].map(([chemistry, useCase, tradeoff]) => (
+                        <tr key={chemistry} className="border-t border-[var(--color-nord-slate)]">
+                          <td className="px-4 py-4 text-[var(--color-nord-white)]">{chemistry}</td>
+                          <td className="px-4 py-4 text-[var(--color-nord-light)]">{useCase}</td>
+                          <td className="px-4 py-4 text-[var(--color-nord-light)]">{tradeoff}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-5 text-sm text-[var(--color-nord-mist)]">
+                  Decision guide: prioritize NMC for vehicle range, LFP for lifetime economics, and LTO where rapid
+                  charge acceptance or extreme temperature resilience dominates the brief.
+                </p>
+              </Card>
+
               <BatteryChargingAnimation />
+
               <Card className="p-8">
                 <h2 className="text-4xl uppercase">Our R&amp;D Investment</h2>
                 <p className="mt-4 text-[var(--color-nord-light)]">
