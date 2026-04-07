@@ -4,12 +4,10 @@ export const SITE = {
   description:
     "Deep-tech R&D powerhouse pioneering breakthrough climate change technologies — from aluminium-graphene batteries and seawater mining to 30+ advanced active materials for global markets.",
   url: "https://nordischeenergy.com",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
-    ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`
-    : "+919830425097",
+  whatsapp: "+919830425097",
   email: "info@nordischeenergy.com",
-  phone: "+91 9986004311",
-  phone2: "+91 9830526595",
+  phone: "+91 98304 25097",
+  phone2: "+91 98304 25097",
   address: "Nordische Energy Systems Pvt Ltd\n91 Springboard Business Hub, #45/3\n1st Floor, Gopala Krishna Complex\nResidency Road, Bangalore-560025\nKarnataka, India",
   cin: "U40106KA2022PTC158401",
   founded: "2022",
