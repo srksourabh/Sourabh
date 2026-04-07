@@ -99,6 +99,7 @@ export default function AboutPage() {
                     alt={`${partner.name} logo`}
                     className="h-10 max-w-[140px] object-contain brightness-0 invert"
                     src={partner.logo}
+                    loading="eager"
                   />
                 </div>
                 <h3 className="text-xl font-bold uppercase text-[var(--color-nord-white)]">{partner.name}</h3>
