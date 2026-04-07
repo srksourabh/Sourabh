@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Hexagon motif (chemistry/science) -->
+  <polygon points="12,10 22,10 27,19 22,28 12,28 7,19" fill="none" stroke="#000" stroke-width="2"/>
+  <circle cx="17" cy="19" r="4" fill="#000"/>
+  <!-- CIPET wordmark -->
+  <text x="35" y="24" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1" fill="#000">CIPET</text>
+  <!-- Full name below -->
+  <text x="35" y="38" font-family="Arial, sans-serif" font-size="6" fill="#000" letter-spacing="0.3">CENTRAL INSTITUTE OF PETROCHEMICALS</text>
+  <text x="35" y="47" font-family="Arial, sans-serif" font-size="6" fill="#000" letter-spacing="0.3">ENGINEERING &amp; TECHNOLOGY</text>
+</svg>

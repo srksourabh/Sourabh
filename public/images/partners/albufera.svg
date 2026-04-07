@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Battery icon -->
+  <rect x="4" y="12" width="22" height="36" rx="2" fill="none" stroke="#000" stroke-width="2"/>
+  <rect x="9" y="8" width="12" height="5" rx="1" fill="#000"/>
+  <!-- Energy bar (partial fill) -->
+  <rect x="8" y="24" width="14" height="18" rx="1" fill="#000"/>
+  <!-- Lightning bolt -->
+  <polyline points="17,24 13,33 16,33 12,42" stroke="#fff" stroke-width="1.5" fill="none"/>
+  <!-- ALBUFERA wordmark -->
+  <text x="33" y="26" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5" fill="#000">ALBUFERA</text>
+  <!-- Subtitle -->
+  <text x="33" y="39" font-family="Arial, sans-serif" font-size="7" letter-spacing="0.5" fill="#000">ENERGY STORAGE S.L.</text>
+</svg>

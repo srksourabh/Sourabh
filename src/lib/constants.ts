@@ -426,10 +426,10 @@ export const ABOUT_CONTENT = {
     { title: "Active Materials Produced", description: "Significant quantities of few-layered graphene and 30+ advanced materials produced and tested." },
   ],
   partners: [
-    { name: "CIPET", location: "Bangalore, India", role: "R&D of Aluminium Graphene technology", logo: "/images/partners/cipet.png" },
+    { name: "CIPET", location: "Bangalore, India", role: "R&D of Aluminium Graphene technology", logo: "/images/partners/cipet.svg" },
     { name: "CSIR-AMPRI", location: "Bhopal, India", role: "Aluminium Foam technology", logo: "/images/partners/csir-ampri.svg" },
     { name: "Iolitec", location: "Germany", role: "Electrolyte manufacturing for Al-G Battery", logo: "/images/partners/iolitec-logo.svg" },
-    { name: "Albufera Energy Storage S.L.", location: "Spain", role: "Commercial-grade pouch cell development", logo: "/images/partners/albufera.png" },
+    { name: "Albufera Energy Storage S.L.", location: "Spain", role: "Commercial-grade pouch cell development", logo: "/images/partners/albufera.svg" },
     { name: "DaVinci Supercars Co", location: "USA", role: "Al-G Battery factory setup", logo: "/images/partners/davinci.svg" },
     { name: "Sakshi Auto Parts (EMIKO)", location: "India", role: "LCUB battery manufacturing", logo: "/images/partners/sakshi.svg" },
     { name: "Sister Nivedita University", location: "India", role: "SWM and Green Hydrogen R&D", logo: "/images/partners/snu.svg" },
