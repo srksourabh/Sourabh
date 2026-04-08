@@ -63,7 +63,7 @@ export default async function TechnologyDetailPage({
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Icon className="h-12 w-12 text-[var(--color-nord-teal)]" />
-            <h1 className="mt-5 text-5xl uppercase sm:text-6xl">{tech.name}</h1>
+            <h1 className="mt-5 text-3xl uppercase sm:text-5xl md:text-6xl">{tech.name}</h1>
             <p className="mt-4 text-lg uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">
               {tech.tagline}
             </p>
@@ -97,7 +97,7 @@ export default async function TechnologyDetailPage({
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {tech.highlights.map((highlight) => (
             <Card key={highlight.title} className="p-8">
-              <h2 className="text-3xl uppercase">{highlight.title}</h2>
+              <h2 className="text-xl uppercase sm:text-3xl">{highlight.title}</h2>
               <ul className="mt-5 space-y-3 text-sm text-[var(--color-nord-light)]">
                 {highlight.points.map((point) => (
                   <li key={point} className="flex items-start gap-3">
@@ -143,7 +143,7 @@ export default async function TechnologyDetailPage({
 
         {slug === "energy-storage" && (
           <div className="mt-14">
-            <h2 className="text-4xl uppercase">Technology Deep-Dive</h2>
+            <h2 className="text-2xl uppercase sm:text-4xl">Technology Deep-Dive</h2>
             <p className="mt-3 text-[var(--color-nord-mist)]">
               Both energy storage platforms are at manufacturing readiness. Below are the validated performance profiles for each chemistry.
             </p>
@@ -199,7 +199,7 @@ export default async function TechnologyDetailPage({
             </div>
 
             <div className="mt-10 rounded-2xl border border-[var(--color-nord-slate)] bg-[var(--color-nord-dark)] p-8 text-center">
-              <h3 className="text-3xl uppercase">Interested in Licensing This Technology?</h3>
+              <h3 className="text-xl uppercase sm:text-3xl">Interested in Licensing This Technology?</h3>
               <p className="mx-auto mt-4 max-w-2xl text-[var(--color-nord-mist)]">
                 Both Al-G and LCUB platforms are available for licensing to manufacturers globally. Contact our team to discuss terms, exclusivity options, and technical integration.
               </p>

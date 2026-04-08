@@ -34,7 +34,7 @@ export function SectionHeader({
     >
       {eyebrow ? <Badge>{eyebrow}</Badge> : null}
       <div className={cn("max-w-3xl", centered && "mx-auto")}>
-        <h2 className="accent-line text-balance text-4xl font-bold uppercase leading-none sm:text-5xl">
+        <h2 className="accent-line text-balance text-2xl font-bold uppercase leading-tight sm:text-4xl md:text-5xl">
           {title}
         </h2>
         {description ? (

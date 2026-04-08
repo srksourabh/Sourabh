@@ -36,6 +36,7 @@ body {
   color: var(--color-nord-light);
   font-family: var(--font-body);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1,

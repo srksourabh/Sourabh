@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <Image alt="Nordische Energy" className="h-10 w-auto" height={40} src="/logo.png" width={133} />
-              <p className="font-[var(--font-display)] text-3xl uppercase tracking-[0.18em] text-[var(--color-nord-white)]">
+              <p className="font-[var(--font-display)] text-xl uppercase tracking-[0.14em] text-[var(--color-nord-white)] sm:text-3xl sm:tracking-[0.18em]">
                 Nordische <span className="text-[var(--color-nord-teal)]">Energy</span>
               </p>
             </div>
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 sm:gap-10 lg:grid-cols-4">
           {Object.entries(FOOTER_LINKS).map(([section, links]) => (
             <div key={section}>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-white)]">

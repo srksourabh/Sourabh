@@ -143,7 +143,7 @@ export function Hero() {
             </motion.div>
 
             <motion.h1
-              className="mt-6 text-balance text-5xl font-extrabold uppercase leading-[0.92] text-[var(--color-nord-white)] sm:text-6xl xl:text-7xl"
+              className="mt-6 text-balance text-3xl font-extrabold uppercase leading-[0.92] text-[var(--color-nord-white)] sm:text-5xl md:text-6xl xl:text-7xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
@@ -283,6 +283,25 @@ export function Hero() {
               </motion.div>
             </div>
           </motion.div>
+        </div>
+      </motion.div>
+
+      {/* ─── MOBILE STATS — visible only on small screens ─── */}
+      <motion.div
+        className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:hidden"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+      >
+        <div className="grid grid-cols-2 gap-3 rounded-2xl border border-[var(--color-nord-slate)] bg-[color:rgb(17_21_32_/_0.7)] p-4 backdrop-blur-sm">
+          {STATS.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-[var(--font-display)] text-xl font-extrabold leading-none text-[var(--color-nord-teal)]">
+                {stat.value}
+              </p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.1em] text-[var(--color-nord-mist)]">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </motion.div>
 

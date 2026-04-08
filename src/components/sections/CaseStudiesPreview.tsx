@@ -37,7 +37,7 @@ export function CaseStudiesPreview() {
                     <p className="mt-5 text-sm uppercase tracking-[0.16em] text-[var(--color-nord-mist)]">
                       {study.client}
                     </p>
-                    <h3 className="mt-3 text-3xl uppercase">{study.title}</h3>
+                    <h3 className="mt-3 text-2xl uppercase sm:text-3xl">{study.title}</h3>
                   </div>
                   <ul className="grid gap-4 sm:grid-cols-2">
                     {study.results.map((result) => (

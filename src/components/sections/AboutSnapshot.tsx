@@ -18,10 +18,10 @@ export function AboutSnapshot() {
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
         >
-          <p className="font-[var(--font-display)] text-8xl font-extrabold leading-none text-[color:rgb(0_212_170_/_0.16)]">
+          <p className="font-[var(--font-display)] text-5xl font-extrabold leading-none text-[color:rgb(0_212_170_/_0.16)] sm:text-8xl">
             01
           </p>
-          <h2 className="mt-5 text-4xl uppercase sm:text-5xl">{ABOUT_CONTENT.headline}</h2>
+          <h2 className="mt-5 text-2xl uppercase sm:text-4xl md:text-5xl">{ABOUT_CONTENT.headline}</h2>
           <p className="mt-6 text-lg text-[var(--color-nord-mist)]">
             {ABOUT_CONTENT.story[0]} {ABOUT_CONTENT.story[1]}
           </p>
@@ -47,7 +47,7 @@ export function AboutSnapshot() {
               >
                 <Card className="h-full p-6">
                   <Icon className="h-7 w-7 text-[var(--color-nord-teal)]" />
-                  <h3 className="mt-5 text-2xl uppercase">{value.title}</h3>
+                  <h3 className="mt-5 text-xl uppercase sm:text-2xl">{value.title}</h3>
                   <p className="mt-3 text-sm text-[var(--color-nord-mist)]">{value.description}</p>
                 </Card>
               </motion.div>

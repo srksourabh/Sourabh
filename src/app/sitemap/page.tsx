@@ -58,14 +58,14 @@ const sitemapGroups = [
 export default function SitemapPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="text-5xl uppercase sm:text-6xl">HTML Sitemap</h1>
+      <h1 className="text-3xl uppercase sm:text-5xl md:text-6xl">HTML Sitemap</h1>
       <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
         Browse all sections of the Nordische Energy website, organized by business area.
       </p>
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {sitemapGroups.map((group) => (
           <Card key={group.title} className="p-6">
-            <h2 className="text-3xl uppercase">{group.title}</h2>
+            <h2 className="text-xl uppercase sm:text-3xl">{group.title}</h2>
             <ul className="mt-5 space-y-4">
               {group.links.map((link) => (
                 <li key={link.href}>

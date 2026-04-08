@@ -83,7 +83,7 @@ export function Navbar() {
             <div className="mb-12 flex items-center justify-between">
               <span className="flex items-center gap-3">
                 <Image alt="Nordische Energy" className="h-8 w-auto" height={32} src="/logo.png" width={106} />
-                <span className="font-[var(--font-display)] text-2xl font-extrabold tracking-[0.2em] text-[var(--color-nord-white)]">
+                <span className="font-[var(--font-display)] text-lg font-extrabold tracking-[0.15em] text-[var(--color-nord-white)] sm:text-2xl sm:tracking-[0.2em]">
                   NORDISCHE <span className="text-[var(--color-nord-teal)]">ENERGY</span>
                 </span>
               </span>
@@ -107,7 +107,7 @@ export function Navbar() {
                 >
                   <Link
                     aria-label={`Navigate to ${link.label}`}
-                    className="block border-b border-[var(--color-nord-slate)] py-4 font-[var(--font-display)] text-4xl uppercase tracking-[0.08em] text-[var(--color-nord-white)]"
+                    className="block border-b border-[var(--color-nord-slate)] py-4 font-[var(--font-display)] text-2xl uppercase tracking-[0.08em] text-[var(--color-nord-white)] sm:text-4xl"
                     href={link.href}
                   >
                     {link.label}

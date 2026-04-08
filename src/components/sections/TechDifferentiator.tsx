@@ -45,7 +45,7 @@ export function TechDifferentiator() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <motion.p
-                    className="mt-6 font-[var(--font-mono)] text-3xl text-[var(--color-nord-teal)]"
+                    className="mt-6 font-[var(--font-mono)] text-2xl text-[var(--color-nord-teal)] sm:text-3xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -53,7 +53,7 @@ export function TechDifferentiator() {
                   >
                     {pillar.stat}
                   </motion.p>
-                  <h3 className="mt-4 text-2xl uppercase">{pillar.title}</h3>
+                  <h3 className="mt-4 text-xl uppercase sm:text-2xl">{pillar.title}</h3>
                   <p className="mt-4 line-clamp-3 text-sm text-[var(--color-nord-mist)]">{pillar.description}</p>
                 </Card>
               </motion.div>

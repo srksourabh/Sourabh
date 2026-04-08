@@ -25,12 +25,12 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="text-5xl uppercase sm:text-6xl">Privacy Policy</h1>
+      <h1 className="text-3xl uppercase sm:text-5xl md:text-6xl">Privacy Policy</h1>
       <p className="mt-6 text-lg text-[var(--color-nord-mist)]">Effective date: April 6, 2026</p>
       <div className="mt-10 space-y-10">
         {sections.map(([title, body]) => (
           <section key={title} id={title.toLowerCase().replaceAll(" ", "-")}>
-            <h2 className="text-3xl uppercase">{title}</h2>
+            <h2 className="text-xl uppercase sm:text-3xl">{title}</h2>
             <p className="mt-4 text-[var(--color-nord-light)]">{body}</p>
           </section>
         ))}

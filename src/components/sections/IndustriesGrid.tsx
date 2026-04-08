@@ -46,7 +46,7 @@ export function IndustriesGrid() {
                   {/* Content on top */}
                   <div className="relative z-10">
                     <Icon className="h-10 w-10 text-[var(--color-nord-teal)]" />
-                    <h3 className="mt-5 text-3xl uppercase">{industry.name}</h3>
+                    <h3 className="mt-5 text-2xl uppercase sm:text-3xl">{industry.name}</h3>
                     <p className="mt-3 max-w-sm text-lg text-[var(--color-nord-light)]">{industry.headline}</p>
                     <Link
                       aria-label={`Explore the ${industry.name} industry page`}

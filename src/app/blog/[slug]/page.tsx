@@ -108,7 +108,7 @@ export default async function BlogArticlePage({ params }: Props) {
               })}
             </time>
           </div>
-          <h1 className="accent-line mb-6 text-balance text-4xl font-bold uppercase leading-none sm:text-5xl">
+          <h1 className="accent-line mb-6 text-balance text-2xl font-bold uppercase leading-tight sm:text-4xl md:text-5xl">
             {article.title}
           </h1>
           <p className="mb-10 text-lg leading-relaxed text-[var(--color-nord-mist)]">

@@ -29,7 +29,7 @@ export default function ContactPage() {
           <LeadCapture compact />
           <div className="space-y-5">
             <Card className="p-6">
-              <h2 className="text-3xl uppercase">Direct Contact</h2>
+              <h2 className="text-xl uppercase sm:text-3xl">Direct Contact</h2>
               <div className="mt-5 space-y-4 text-sm text-[var(--color-nord-light)]">
                 <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--color-nord-teal)]" /> {SITE.email}</p>
                 <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--color-nord-teal)]" /> {SITE.phone}</p>
@@ -47,7 +47,7 @@ export default function ContactPage() {
             </Card>
 
             <Card className="p-6">
-              <h2 className="text-3xl uppercase">Office Details</h2>
+              <h2 className="text-xl uppercase sm:text-3xl">Office Details</h2>
               <div className="mt-5 space-y-4 text-sm text-[var(--color-nord-light)]">
                 <p className="flex items-start gap-3 whitespace-pre-line">
                   <MapPin className="mt-0.5 h-4 w-4 text-[var(--color-nord-teal)]" />
@@ -74,7 +74,7 @@ export default function ContactPage() {
             </Card>
 
             <Card className="p-6">
-              <h2 className="text-3xl uppercase">Before You Write, Tell Us</h2>
+              <h2 className="text-xl uppercase sm:text-3xl">Before You Write, Tell Us</h2>
               <ul className="mt-5 space-y-3 text-sm text-[var(--color-nord-mist)]">
                 <li>1. What operating environment and duty cycle will the battery see?</li>
                 <li>2. What energy, voltage, footprint, and charging targets must be met?</li>

@@ -33,7 +33,7 @@ export function ManufacturingStrip() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">
               Manufacturing
             </p>
-            <h2 className="mt-2 text-3xl uppercase sm:text-4xl">{MANUFACTURING_CONTENT.headline}</h2>
+            <h2 className="mt-2 text-xl uppercase sm:text-3xl md:text-4xl">{MANUFACTURING_CONTENT.headline}</h2>
           </div>
         </motion.div>
 
@@ -64,7 +64,7 @@ export function ManufacturingStrip() {
                     0{index + 1}
                   </span>
                   <div>
-                    <h3 className="text-2xl uppercase">{item.title}</h3>
+                    <h3 className="text-xl uppercase sm:text-2xl">{item.title}</h3>
                     <p className="mt-2 text-sm text-[var(--color-nord-mist)]">{item.description}</p>
                   </div>
                 </motion.li>

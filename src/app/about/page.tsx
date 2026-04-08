@@ -43,13 +43,13 @@ export default function AboutPage() {
       <section className="bg-[var(--color-nord-deep)] py-[var(--section-py)]">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <Card className="p-8">
-            <p className="text-7xl leading-none text-[color:rgb(0_212_170_/_0.22)]">&ldquo;</p>
-            <h2 className="mt-4 text-4xl uppercase">Vision</h2>
+            <p className="text-4xl leading-none sm:text-7xl text-[color:rgb(0_212_170_/_0.22)]">&ldquo;</p>
+            <h2 className="mt-4 text-2xl uppercase sm:text-4xl">Vision</h2>
             <p className="mt-4 text-[var(--color-nord-light)]">{ABOUT_CONTENT.vision}</p>
           </Card>
           <Card className="p-8">
-            <p className="text-7xl leading-none text-[color:rgb(0_212_170_/_0.22)]">&ldquo;</p>
-            <h2 className="mt-4 text-4xl uppercase">Mission</h2>
+            <p className="text-4xl leading-none sm:text-7xl text-[color:rgb(0_212_170_/_0.22)]">&ldquo;</p>
+            <h2 className="mt-4 text-2xl uppercase sm:text-4xl">Mission</h2>
             <p className="mt-4 text-[var(--color-nord-light)]">{ABOUT_CONTENT.mission}</p>
           </Card>
         </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {ABOUT_CONTENT.milestones.map((milestone, i) => (
               <Card key={milestone.title} className="p-6">
-                <p className="font-[var(--font-display)] text-4xl text-[var(--color-nord-teal)]">0{i + 1}</p>
+                <p className="font-[var(--font-display)] text-2xl text-[var(--color-nord-teal)] sm:text-4xl">0{i + 1}</p>
                 <h3 className="mt-4 text-xl uppercase">{milestone.title}</h3>
                 <p className="mt-3 text-sm text-[var(--color-nord-mist)]">{milestone.description}</p>
               </Card>
@@ -118,7 +118,7 @@ export default function AboutPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {ABOUT_CONTENT.businessModel.map((item, i) => (
               <Card key={item.title} className="p-6">
-                <p className="font-[var(--font-display)] text-4xl text-[var(--color-nord-teal)]">0{i + 1}</p>
+                <p className="font-[var(--font-display)] text-2xl text-[var(--color-nord-teal)] sm:text-4xl">0{i + 1}</p>
                 <h3 className="mt-4 text-xl uppercase">{item.title}</h3>
                 <p className="mt-3 text-sm text-[var(--color-nord-mist)]">{item.description}</p>
               </Card>
@@ -150,7 +150,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
             <Card className="p-8">
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">Headquarters</p>
-              <h3 className="mt-3 text-3xl uppercase">{HEADQUARTERS.company}</h3>
+              <h3 className="mt-3 text-xl uppercase sm:text-3xl">{HEADQUARTERS.company}</h3>
               <p className="mt-3 text-[var(--color-nord-light)]">{HEADQUARTERS.summary}</p>
               <p className="mt-2 text-sm text-[var(--color-nord-mist)]">{HEADQUARTERS.city}</p>
               <div className="mt-5 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
@@ -166,7 +166,7 @@ export default function AboutPage() {
             <Card className="flex flex-col justify-between p-8">
               <div>
                 <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">Resources</p>
-                <h3 className="mt-3 text-3xl uppercase">Downloads & Contact</h3>
+                <h3 className="mt-3 text-xl uppercase sm:text-3xl">Downloads & Contact</h3>
                 <p className="mt-3 text-sm text-[var(--color-nord-mist)]">
                   Download our business brochure or get in touch with our team.
                 </p>

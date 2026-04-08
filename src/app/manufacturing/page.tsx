@@ -54,7 +54,7 @@ export default function ManufacturingPage() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {MANUFACTURING_CONTENT.capabilities.map((capability) => (
               <Card key={capability.title} className="p-7">
-                <h2 className="text-3xl uppercase">{capability.title}</h2>
+                <h2 className="text-xl uppercase sm:text-3xl">{capability.title}</h2>
                 <p className="mt-4 text-sm text-[var(--color-nord-mist)]">{capability.description}</p>
               </Card>
             ))}
@@ -73,7 +73,7 @@ export default function ManufacturingPage() {
               "Shipment release and traceability pack",
             ].map((step, index) => (
               <Card key={step} className="p-5">
-                <p className="font-[var(--font-display)] text-4xl text-[var(--color-nord-teal)]">0{index + 1}</p>
+                <p className="font-[var(--font-display)] text-2xl text-[var(--color-nord-teal)] sm:text-4xl">0{index + 1}</p>
                 <p className="mt-3 text-sm text-[var(--color-nord-light)]">{step}</p>
               </Card>
             ))}

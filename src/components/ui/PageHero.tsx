@@ -30,7 +30,7 @@ export function PageHero({ label, title, description, image }: PageHeroProps) {
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">
           {label}
         </p>
-        <h1 className="mt-4 text-5xl uppercase sm:text-6xl">{title}</h1>
+        <h1 className="mt-4 text-3xl uppercase sm:text-5xl md:text-6xl">{title}</h1>
         <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">{description}</p>
       </div>
     </section>

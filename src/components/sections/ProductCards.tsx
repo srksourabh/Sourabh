@@ -46,7 +46,7 @@ export function ProductCards() {
                     </div>
                   </div>
                   <Icon className="h-10 w-10" style={{ color: product.color }} />
-                  <h3 className="mt-5 text-3xl uppercase">{product.name}</h3>
+                  <h3 className="mt-5 text-2xl uppercase sm:text-3xl">{product.name}</h3>
                   <p className="mt-2 text-sm uppercase tracking-[0.16em] text-[var(--color-nord-mist)]">
                     {product.tagline}
                   </p>

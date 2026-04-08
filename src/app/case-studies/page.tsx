@@ -28,15 +28,15 @@ export default function CaseStudiesPage() {
               <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
                 <div>
                   <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">{study.industry}</p>
-                  <h2 className="mt-4 text-4xl uppercase">{study.title}</h2>
+                  <h2 className="mt-4 text-2xl uppercase sm:text-4xl">{study.title}</h2>
                   <p className="mt-3 text-sm text-[var(--color-nord-mist)]">{study.client}</p>
                   <div className="mt-6 grid gap-4 sm:grid-cols-2">
                     <div>
-                      <p className="font-[var(--font-display)] text-4xl text-[var(--color-nord-teal)]">{study.deliveryWeeks} weeks</p>
+                      <p className="font-[var(--font-display)] text-2xl text-[var(--color-nord-teal)] sm:text-4xl">{study.deliveryWeeks} weeks</p>
                       <p className="text-sm text-[var(--color-nord-mist)]">Delivery timeline</p>
                     </div>
                     <div>
-                      <p className="font-[var(--font-display)] text-4xl text-[var(--color-nord-teal)]">{study.units}</p>
+                      <p className="font-[var(--font-display)] text-2xl text-[var(--color-nord-teal)] sm:text-4xl">{study.units}</p>
                       <p className="text-sm text-[var(--color-nord-mist)]">Units supplied</p>
                     </div>
                   </div>

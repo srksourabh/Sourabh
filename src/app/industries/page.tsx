@@ -33,7 +33,7 @@ export default function IndustriesPage() {
               return (
                 <Card key={industry.slug} className="p-7">
                   <Icon className="h-10 w-10 text-[var(--color-nord-teal)]" />
-                  <h2 className="mt-5 text-3xl uppercase">{industry.name}</h2>
+                  <h2 className="mt-5 text-2xl uppercase sm:text-3xl">{industry.name}</h2>
                   <p className="mt-3 text-lg text-[var(--color-nord-light)]">{industry.headline}</p>
                   <p className="mt-4 text-sm text-[var(--color-nord-mist)]">{industry.description}</p>
                   <Link
@@ -49,7 +49,7 @@ export default function IndustriesPage() {
           </div>
 
           <div className="mt-12 rounded-2xl border border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] p-8 text-center">
-            <p className="font-[var(--font-display)] text-6xl font-extrabold text-[var(--color-nord-teal)]">15 MWh</p>
+            <p className="font-[var(--font-display)] text-4xl font-extrabold text-[var(--color-nord-teal)] sm:text-6xl">15 MWh</p>
             <p className="mt-3 text-sm uppercase tracking-[0.16em] text-[var(--color-nord-mist)]">
               Total installed capacity across all applications
             </p>
